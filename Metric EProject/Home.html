@@ -12,6 +12,8 @@
 <link rel="stylesheet" href="CSS/Home.css">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
 </head>
 <body>
   <div class="one">
@@ -115,6 +117,9 @@
       <div id="chart_div4" style="width: 100%; height: 400px;"></div>
 </div>
 
+<div class="ChartP"> <p> A mile is equal to approximately 1.60934 kilometers.
+</p></div>
+
 <div data-aos="fade-up">
       <div id="chart_div3"></div>
   
@@ -152,8 +157,10 @@
           chart.draw(data, options);
         }
       </script>
+      <div class="ChartP"> <p> There are 3 feet = 36 inches in a yard. A yard is roughly equivalent to a meter: one yard = 0.9144 meters.
+      </p></div>
       </div>
-
+      
 
 <div data-aos="fade-up">
       <div id="chart_div"></div>
@@ -198,16 +205,605 @@
         }
       </script>
 </div>
-      
-      <div class="MainH1"> <h3>Area Conversion Charts </h3></div>
 
-
-
-
-
+<div class="ChartP"> <p> To convert a measurement in feet to a measurement in meters, multiply the length by the following conversion ratio: 0.3048 meters/foot. </p></div>
       
 
-      <script>
+
+<div class="MainH1"> <h2>Area Conversion Charts </h2></div>
+
+
+<div id="chart_div11" style="width: 100%; height: 400px;">
+  <title>Square Inches to Square Millimeters Conversion Chart</title>
+  <!-- Load Google Charts library -->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {packages: ['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'Square Inches');
+      data.addColumn('number', 'Square Millimeters');
+      data.addRows([
+        [1, 645.16],
+        [2, 1290.32],
+        [3, 1935.48],
+        [4, 2580.64],
+        [5, 3225.80]
+        // Add more rows as needed for your desired data points
+      ]);
+
+      var options = {
+        title: 'Square Inches to Square Millimeters Conversion',
+        hAxis: { title: 'Square Inches', minValue: 0, maxValue: 10 },
+        vAxis: { title: 'Square Millimeters', minValue: 0, maxValue: 3500 },
+        legend: 'none'
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('chart_div11'));
+      chart.draw(data, options);
+    }
+  </script>
+  </div>
+
+
+  <div id="chart_12" style="width: 1100px; height: 200px;">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+  <script type="text/javascript">
+    // Load the Visualization API and the corechart package.
+    google.charts.load('current', {'packages':['corechart']});
+  
+    // Set a callback to run when the Google Visualization API is loaded.
+    google.charts.setOnLoadCallback(drawChart);
+  
+    // Callback that creates and populates a data table,
+    // instantiates the line chart, passes in the data and
+    // draws it.
+    function drawChart() {
+      // Create the data table.
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'Square Feet');
+      data.addColumn('number', 'Square Meters');
+      data.addRows([
+        [100, 9.2903],
+        [200, 18.5806],
+        [300, 27.8709],
+        [400, 37.1612],
+        [500, 46.4515],
+        // Add more rows as needed...
+      ]);
+  
+      // Set chart options
+      var options = {
+        title: 'Square Feet to Square Meters Conversion',
+        curveType: 'function',
+        legend: { position: 'bottom' }
+      };
+  
+      // Instantiate and draw our chart, passing in some options.
+      var chart = new google.visualization.LineChart(document.getElementById('chart_12'));
+      chart.draw(data, options);
+    }
+  </script>
+  
+  </div>
+
+
+  <div id="chart_div13" style="width: 100%; height: 500px;">
+      <title>Square Yards to Square Meters Conversion Chart</title>
+      <!-- Include Google Charts library -->
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
+          google.charts.load('current', { 'packages': ['corechart'] });
+          google.charts.setOnLoadCallback(drawChart);
+  
+          function drawChart() {
+              // Conversion data array: [Square Yards, Square Meters]
+              var conversionData = [
+                  [1, 0.836127],
+                  [2, 1.672254],
+                  [3, 2.508381],
+                  [4, 3.344508],
+                  [5, 4.180635],
+                  // Add more data points as needed
+              ];
+  
+              var data = new google.visualization.DataTable();
+              data.addColumn('number', 'Square Yards');
+              data.addColumn('number', 'Square Meters');
+              data.addRows(conversionData);
+  
+              var options = {
+                  title: 'Square Yards to Square Meters Conversion',
+                  hAxis: { title: 'Square Yards' },
+                  vAxis: { title: 'Square Meters' },
+                  legend: 'none'
+              };
+  
+              var chart = new google.visualization.LineChart(document.getElementById('chart_div13'));
+              chart.draw(data, options);
+          }
+      </script>
+      </div>
+  
+
+      <div id="chart_div14" style="width: 1100px; height: 300px;">
+      <title>Square Miles to Square Kilometers Conversion</title>
+      <!-- Include the Google Charts API -->
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>      
+    
+      <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+    
+        function drawChart() {
+          // Data for conversion values
+          var data = google.visualization.arrayToDataTable([
+            ['Square Miles', 'Square Kilometers'],
+            [1, 2.58999], // Example value: 1 square mile = 2.58999 square kilometers
+            [2, 5.17998],
+            [3, 7.76997],
+            // Add more conversion values here
+          ]);
+    
+          var options = {
+            title: 'Square Miles to Square Kilometers Conversion',
+            hAxis: {
+              title: 'Square Miles'
+            },
+            vAxis: {
+              title: 'Square Kilometers'
+            },
+            legend: 'none',
+            pointSize: 10,
+          };
+    
+          var chart = new google.visualization.LineChart(document.getElementById('chart_div14'));
+          chart.draw(data, options);
+        }
+      </script>
+      </div>
+
+      <div id="chart_div55" style="width: 100%; height: 400px;">
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+          // Step 2: Define the data for the conversion from acres to hectares
+          var data = google.visualization.arrayToDataTable([
+            ['Acres', 'Hectares'],
+            [0, 0],
+            [1, 0.404686],
+            [2, 0.809372],
+            [3, 1.214058],
+            [4, 1.618744],
+            [5, 2.02343],
+            [6, 2.428116],
+            [7, 2.832802],
+            [8, 3.237488],
+            [9, 3.642174],
+            [10, 4.04686]
+            // Add more data points as needed
+          ]);
+      
+          // Step 3: Draw the line chart using Google Charts
+          google.charts.load('current', {'packages':['corechart']});
+          google.charts.setOnLoadCallback(drawChart);
+      
+          function drawChart() {
+            var options = {
+              title: 'Acres to Hectares Conversion',
+              curveType: 'function',
+              legend: { position: 'bottom' }
+            };
+      
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div55'));
+            chart.draw(data, options);
+          }
+        </script>
+      </div>
+
+
+
+
+
+
+<div data-aos="fade-up">
+      <div class="MainH1"> <h3>Volume Conversion Charts </h3> </div>
+      </div>      
+
+      
+        
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <div id="conversionChart" style="width: 100%; height: 400px;">
+        <script type="text/javascript">
+          google.charts.load('current', {'packages':['corechart']});
+          google.charts.setOnLoadCallback(drawConversionChart);
+        
+          function drawConversionChart() {
+            var data = google.visualization.arrayToDataTable([
+              ['Gallons', 'Liters'],
+              [1, 3.78541],
+              [2, 7.57082],
+              [3, 11.35623],
+              [4, 15.14164],
+              [5, 18.92706],
+              // Add more data points as needed
+            ]);
+        
+            var options = {
+              title: 'Gallon to Liter Conversion',
+              hAxis: {title: 'Gallons'},
+              vAxis: {title: 'Liters'},
+              legend: 'none',
+              pointSize: 5,
+            };
+        
+            var chart = new google.visualization.LineChart(document.getElementById('conversionChart'));
+            chart.draw(data, options);
+          }
+        </script>
+        
+      </div>
+
+
+
+      <div data-aos="fade-up">
+      <title>Fluid Ounces to Millimeters Conversion Chart</title>
+      <!-- Load the Google Charts library -->
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <!-- Your chart will be rendered here -->
+      <div id="chart_div22" style="width: 100%; height: 400px;">
+    
+      <script type="text/javascript">
+        var data = [
+          ['Fluid Ounces', 'Millimeters'],
+          [1, 29.5735],
+          [2, 59.1471],
+          [3, 88.7206],
+          [4, 118.2941],
+          // Add more data points as needed
+        ];
+    
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+    
+        function drawChart() {
+          var chartData = google.visualization.arrayToDataTable(data);
+    
+          var options = {
+            title: 'Fluid Ounces to Millimeters Conversion Chart',
+            hAxis: { title: 'Fluid Ounces' },
+            vAxis: { title: 'Millimeters' },
+            legend: 'none',
+          };
+    
+          var chart = new google.visualization.LineChart(document.getElementById('chart_div22'));
+          chart.draw(chartData, options);
+        }
+      </script>
+      </div>
+      </div>
+
+
+      <div data-aos="fade-up">
+      <div id="chart_div23" style="width: 1000px; height: 400px;">
+      <title>Cubic Feet to Cubic Meters Conversion Chart</title>
+      <!-- Include Google Charts library -->
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
+          google.charts.load('current', {'packages':['corechart']});
+          google.charts.setOnLoadCallback(drawChart);
+  
+          function drawChart() {
+              var data = google.visualization.arrayToDataTable([
+                  ['Cubic Feet', 'Cubic Meters'],
+                  [1, 0.0283168],
+                  [2, 0.0566336],
+                  [3, 0.0849504],
+                  [4, 0.1132672],
+                  [5, 0.141584],
+                  // Add more data points as needed
+              ]);
+  
+              var options = {
+                  title: 'Cubic Feet to Cubic Meters Conversion',
+                  curveType: 'function',
+                  legend: { position: 'bottom' }
+              };
+  
+              var chart = new google.visualization.LineChart(document.getElementById('chart_div23'));
+  
+              chart.draw(data, options);
+          }
+      </script>
+      </div>
+</div>
+
+
+<div data-aos="fade-up">
+      <div id="chart_div24" style="width: 1000px; height: 200px;">
+    
+  <title>Cubic Yards to Cubic Meters Conversion Chart</title>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+  
+    function convertCubicYardsToCubicMeters(cubicYards) {
+      return cubicYards * 0.7646; 
+    }
+  </script>
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('number', 'Cubic Yards');
+    data.addColumn('number', 'Cubic Meters');
+
+    // Add data to the chart
+    for (var cubicYards = 0; cubicYards <= 100; cubicYards += 5) {
+      var cubicMeters = convertCubicYardsToCubicMeters(cubicYards);
+      data.addRow([cubicYards, cubicMeters]);
+    }
+
+    var options = {
+      title: 'Cubic Yards to Cubic Meters Conversion Chart',
+      hAxis: {title: 'Cubic Yards'},
+      vAxis: {title: 'Cubic Meters'},
+      legend: 'none',
+    };
+
+    var chart = new google.visualization.LineChart(document.getElementById('chart_div24'));
+    chart.draw(data, options);
+  }
+</script>
+      </div>
+      </div>
+    
+      <div data-aos="fade-up">
+        <div class="MainH1"> <h3>Mass Conversion Charts </h3> </div>
+        </div>      
+
+        <div id="chart_div31" style="width: 100%; height: 400px;">
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Ounces to Grams Conversion Chart</title>
+          <!-- Step 1: Include Google Charts library -->
+          <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+          <script type="text/javascript">
+            google.charts.load('current', { 'packages': ['corechart'] });
+            google.charts.setOnLoadCallback(drawChart);
+        
+            function drawChart() {
+              // Step 2: Create a data table with ounces and grams data
+              var data = new google.visualization.DataTable();
+              data.addColumn('number', 'Ounces');
+              data.addColumn('number', 'Grams');
+              data.addRows([
+                [1, 28.35],
+                [2, 56.7],
+                [3, 85.05],
+                [4, 113.4],
+                [5, 141.75],
+                // Add more data points as needed
+              ]);
+        
+              // Step 3: Create and configure the chart
+              var options = {
+                title: 'Ounces to Grams Conversion',
+                curveType: 'function',
+                legend: { position: 'bottom' },
+                hAxis: {
+                  title: 'Ounces',
+                  minValue: 0,
+                },
+                vAxis: {
+                  title: 'Grams',
+                  minValue: 0,
+                },
+              };
+        
+              var chart = new google.visualization.LineChart(document.getElementById('chart_div31'));
+              chart.draw(data, options);
+            }
+          </script>
+          </div>
+        </div>
+        
+
+
+        <div id="chart_div32" style="width: 100%; height: 500px;"></div>
+  <title>Pounds to Kilograms Conversion Chart</title>
+  <!-- Load Google Charts Library -->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    // Load the Visualization API and the corechart package.
+    google.charts.load('current', {'packages':['corechart']});
+
+    // Set a callback to run when the Google Visualization API is loaded.
+    google.charts.setOnLoadCallback(drawChart);
+
+    // Callback that creates and populates a data table,
+    // instantiates the chart, passes in the data and
+    // draws it.
+    function drawChart() {
+      // Create the data table.
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'Pounds');
+      data.addColumn('number', 'Kilograms');
+
+      // Add data to the table.
+      var poundsToKilograms = [
+        [0, 0],
+        [10, 4.54],
+        [20, 9.07],
+        [30, 13.61],
+        [40, 18.14],
+        [50, 22.68],
+        [60, 27.22],
+        [70, 31.75],
+        [80, 36.29],
+        [90, 40.82],
+        [100, 45.36]
+        // Add more data points as needed
+      ];
+
+      data.addRows(poundsToKilograms);
+
+      // Set chart options
+      var options = {
+        title: 'Pounds to Kilograms Conversion Chart',
+        curveType: 'function',
+        legend: { position: 'bottom' },
+        vAxis: { title: 'Kilograms' },
+        hAxis: { title: 'Pounds' }
+      };
+
+      // Instantiate and draw our chart, passing in some options.
+      var chart = new google.visualization.LineChart(document.getElementById('chart_div32'));
+      chart.draw(data, options);
+    }
+  </script>
+  </div>
+
+
+  <div id="chart_div33" style="width: 100%; height: 500px;">
+  <title>Pounds to Megagrams Conversion Chart</title>
+    <!-- Load Google Charts API -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('number', 'Pounds');
+            data.addColumn('number', 'Megagrams');
+
+            // Conversion data points
+            var conversionData = [
+                [0, 0],
+                [500, 0.226796],
+                [1000, 0.453592],
+                [1500, 0.680388],
+                [2000, 0.907185]
+            ];
+
+            data.addRows(conversionData);
+
+            var options = {
+                title: 'Pounds to Megagrams Conversion',
+                hAxis: {
+                    title: 'Pounds'
+                },
+                vAxis: {
+                    title: 'Megagrams'
+                },
+                legend: 'none'
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div33'));
+            chart.draw(data, options);
+        }
+    </script>
+    </div>
+
+
+
+    <div class="MainH1"> <h2>Temperature Conversion Charts </h2></div>
+
+
+    <div id="chart_div41" style="width: 100%; height: 500px;">
+    <title>Fahrenheit to Celsius Conversion Chart</title>
+    <!-- Load the Google Charts Library -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script>
+      // Load the Google Charts library
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+  
+      // Function to draw the chart
+      function drawChart() {
+          // Create a data table with columns: Fahrenheit and Celsius
+          var data = new google.visualization.DataTable();
+          data.addColumn('number', 'Fahrenheit');
+          data.addColumn('number', 'Celsius');
+  
+          // Add data rows to the data table for Fahrenheit values from 0 to 100
+          for (var fahrenheit = 0; fahrenheit <= 100; fahrenheit++) {
+              var celsius = (fahrenheit - 32) * 5/9;
+              data.addRow([fahrenheit, celsius]);
+          }
+  
+          // Set chart options
+          var options = {
+              title: 'Fahrenheit to Celsius Conversion Chart',
+              hAxis: {title: 'Fahrenheit'},
+              vAxis: {title: 'Celsius'},
+              legend: 'none'
+          };
+  
+          // Instantiate and draw the chart, passing in the options.
+          var chart = new google.visualization.LineChart(document.getElementById('chart_div41'));
+          chart.draw(data, options);
+      }
+  </script>
+  </div>
+
+  <div id="chart_div42">
+  <title>Celsius to Fahrenheit Conversion Chart</title>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  
+  
+    <script type="text/javascript">
+      // Load the Google Charts library
+      google.charts.load('current', {'packages':['corechart']});
+    
+      // Set a callback to draw the chart when the Google Charts library is loaded
+      google.charts.setOnLoadCallback(drawChart);
+    
+      // Function to draw the chart
+      function drawChart() {
+        // Create a data table to hold the data
+        var data = new google.visualization.DataTable();
+        data.addColumn('number', 'Celsius');
+        data.addColumn('number', 'Fahrenheit');
+    
+        // Add data to the data table (from -100°C to 100°C in steps of 10°C)
+        var celsiusToFahrenheitData = [];
+        for (var celsius = -100; celsius <= 100; celsius += 10) {
+          var fahrenheit = celsiusToFahrenheit(celsius);
+          celsiusToFahrenheitData.push([celsius, fahrenheit]);
+        }
+        data.addRows(celsiusToFahrenheitData);
+    
+        // Set chart options
+        var options = {
+          title: 'Celsius to Fahrenheit Conversion Chart',
+          hAxis: { title: 'Celsius' },
+          vAxis: { title: 'Fahrenheit' }
+        };
+    
+        // Create and draw the chart
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div42'));
+        chart.draw(data, options);
+      }
+    
+      // Function to convert Celsius to Fahrenheit
+      function celsiusToFahrenheit(celsius) {
+        return (celsius * 9/5) + 32;
+      }
+    </script>
+    
+  </div>
+
+
+  
+
+
+<script>
         AOS.init();
       </script> 
 
