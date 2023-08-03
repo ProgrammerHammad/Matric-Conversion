@@ -282,10 +282,17 @@ input {
 }
 .conv{
   max-width: 100%;
+<<<<<<< Updated upstream
   grid-template-columns:0;
   background-color: rgb(238, 167, 0);
   text-align: center;
 
+=======
+  margin-left: -46px;
+  grid-template-columns:0;
+  background-color: rgb(238, 167, 0);
+  text-align: center;
+>>>>>>> Stashed changes
 }
 .card{
     background-color: white;
@@ -298,6 +305,18 @@ input {
     background-color: rgb(238, 167, 0);
 }
 
+<<<<<<< Updated upstream
+=======
+.anv{
+  background-color: #F8F8F8;
+  width: 290px;
+  height: 42px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin-left: 4px;
+  border: 1px solid #C6C6C6;
+}
+>>>>>>> Stashed changes
 .spacing{
   margin: 15px;
 }
@@ -426,43 +445,42 @@ input {
         </div>    
       </div>
       <!-- Length -->
+      <form name="lengthCon">
       <div class="select" style="display: none;" id="Length">
         <div class="row">
+          <div style="display: flex; margin-left: 20px;">
+            <p colspan="4"><div id="formula" style="display: none;">meters = 1 meters</div></p>
+            <p><input class="around" placeholder="Enter" type="text" name="fromValue" value="1" size="5" maxlength="10"></p>
+            <p class="anv" id="toValue">1</p>
+           </div>
           <div class="col-lg-6">
-            <select class="form-select" multiple aria-label="multiple select example">
-              <option value="1">Meter</option>
-              <option value="2">Kilometer</option>
-              <option value="3">Centimeter</option>
-              <option value="4">Millimeter</option>
-              <option value="5">Nanometer</option>
-              <option value="6">Micrometer</option>
-              <option value="7">Mile</option>
-              <option value="8">Yard</option>
-              <option value="9">Foot</option>
-              <option value="10">Inch</option>
-              <option value="11">Light Year</option>
-            </select>
+            <p class="Value"></p> 
+            <p>
+              <select class="form-select movement" name="fromUnit" onChange="convertUnit()" multiple aria-label="multiple select example">
+                <option> meters
+                <option> kilometers
+                <option> miles
+                <option> feet 
+                <option> yards
+              </select>
+            </p>
       
           </div>
           <div class="col-lg-6">
-            <select class="form-select" multiple aria-label="multiple select example">
-              <option value="1">Meter</option>
-              <option value="2">Kilometer</option>
-              <option value="3">Centimeter</option>
-              <option value="4">Millimeter</option>
-              <option value="5">Nanometer</option>
-              <option value="6">Micrometer</option>
-              <option value="7">Mile</option>
-              <option value="8">Yard</option>
-              <option value="9">Foot</option>
-              <option value="10">Inch</option>
-              <option value="11">Light Year</option>
-            
+            <p class="Options"></p>
+
+            <select class="form-select moves" name="toUnit" onChange="convertUnit()" multiple aria-label="multiple select example">
+              <option> meters
+              <option> kilometers
+              <option> miles
+              <option> feet
+              <option> yards
             </select>
-      
+          </div>
           </div>
         </div>
-        
+      </div>
+      </form>
         </div>
         <!-- volume  -->
         <div class="select" style="display: none;" id="Volume">
@@ -624,6 +642,7 @@ input {
             
             </div>
             <!-- temptature  -->
+<<<<<<< Updated upstream
             <div class="select" style="display: none;" id="Temperature">
               <div class="row">
                 <div class="col-lg-6 temp">
@@ -658,6 +677,42 @@ input {
               
               </div>
           </div>
+=======
+              <div class="select" style="display: none;" id="Temperature">
+                <div class="row">
+                  <div class="col-lg-6 temp">
+                      <!-- <div class="wrapper" style="width: 100%;"> -->
+                        <div class="conv">
+                        <!-- <div class="card"> -->
+
+                          <header>Temperature Converter</header>
+                          
+                          <div>
+                            <div class="temp-fields">
+                              <h3 class="spacing">Celsius</h3>
+                              <input id="celsius" value="0"/>
+                            </div><br>
+                            <div class="temp-fields">
+                              <h3 class="spacing">Fahrenheit</h3>
+                              <input id="fahrenheit" value="0"/>
+                            </div><br>
+                            <div class="temp-fields">
+                              <h3 class="spacing">Kelvin</h3>
+                              <input id="kelvin" value="0"/>
+                            </div>
+                          <div>
+                            <button id="submit" class="spacing" type="submit" value="submit">Convert</button>
+                            <button id="reset" class="spacing" type="reset" value="reset">Reset</button>
+                            <br><br>
+                          </div>
+                        </div>
+                      <!-- </div> -->
+                    </div>
+                </div>
+                
+                </div>
+            </div>
+>>>>>>> Stashed changes
 
     </div>
 
@@ -669,9 +724,15 @@ input {
 
 
 <script>
+<<<<<<< Updated upstream
   const inputField = document.querySelector('#from1');
 const outputField = document.querySelector('#to1');
 const units = document.querySelectorAll('.units1 input');
+=======
+  const inputField = document.querySelector('#from');
+const outputField = document.querySelector('#to');
+const units = document.querySelectorAll('.units input');
+>>>>>>> Stashed changes
 
 const getInputValue = () => Number(inputField.value);
 
