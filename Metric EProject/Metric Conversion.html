@@ -11,6 +11,306 @@
     <link rel="stylesheet" href="CSS/MetricConversion.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
+<style>
+  /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+main {
+  display: block;
+} */
+/* h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+} */
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+a {
+  background-color: transparent;
+}
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+b,
+strong {
+  font-weight: bolder;
+}
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+img {
+  border-style: none;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+button,
+input {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+progress {
+  vertical-align: baseline;
+}
+textarea {
+  overflow: auto;
+}
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+details {
+  display: block;
+}
+summary {
+  display: list-item;
+}
+template {
+  display: none;
+}
+[hidden] {
+  display: none;
+}
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+/* body {
+  font-family: "Lato";
+  font-size: 0;
+  padding: 30px;
+} */
+.converter {
+  max-width: 460px;
+  margin: 0 auto;
+  padding: 12px;
+  background: rgb(238, 167, 0);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+@media screen and (min-width: 520px) {
+  .converter {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.converter .value {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.converter .value input {
+  margin: 6px 0 12px;
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  text-align: right;
+  background: #ffffff;
+  outline: none;
+  border: 2px solid transparent;
+}
+.converter .value input:focus {
+  background: #e8f6fe;
+}
+.converter .value input.error {
+  border: 2px solid #dc3545;
+}
+.converter .units {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid #ffffff;
+  padding: 6px;
+}
+.converter .units label {
+  display: block;
+  width: 100%;
+  height: 47px;
+  line-height: 47px;
+  text-align: center;
+  font-size: 22px;
+  color: #ffffff;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+.converter .units label.active {
+  border: 2px solid #000000;
+}
+.converter .units input {
+  display: none;
+}
+.converter .units input:checked + label {
+  background: #14a3f5;
+}
+
+/*# sourceMappingURL=style.css.map */
+
+        /* body, input, button {
+          font-family: 'Roboto Condensed', sans-serif;
+          font-size: 20px;
+          text-align: center;
+          margin-left: 100px;
+          background: url(http://wall.rimbuz.com/wp-content/uploads/4K-Wallpaper-High-Definition.jpg);
+          background-position: center;
+        } */
+
+button {
+  background: #CCC;
+  border: 1px solid rgba(0,0,0,.2);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.7), 0 1px 2px rgba(0,0,0,.25);
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 15px 0 15px 10px;
+}
+
+button:hover {
+  background: #DDD;
+  cursor: pointer;
+}
+
+button:active {
+  background: #BBB;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.25);
+}
+
+header{
+  font-size: 2em;
+  margin: 10px 0 10px 0;
+}
+
+input {
+  background: #F8F8F8;
+  width: 50px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: 1px solid #C6C6C6;
+}
+.temp{
+  margin-top: -10px;
+  width: 63.652%;
+  margin-left: 208px;
+}
+.conv{
+  max-width: 100%;
+  grid-template-columns:0;
+  background-color: rgb(238, 167, 0);
+  text-align: center;
+
+}
+.card{
+    background-color: white;
+    max-width: 100%;
+    min-width: 300px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px black;
+    text-align: center;
+    background-color: rgb(238, 167, 0);
+}
+
+.spacing{
+  margin: 15px;
+}
+
+.temp-fields{
+  display: inline-block;
+}
+
+.wrapper{
+  max-width: 960px;
+  margin: auto;
+}
+</style>
 <body>
     <div class="one">
         <img class="NavImg w-100" src="Images/pngwing.com.png" alt="" >
@@ -55,49 +355,75 @@
                 
                 </ul>
           </div>
-          <div class="inputs">
-            <input type="text" id="val1">
-            <input type="text" id="val2">
-            <p id="result"></p>
-          </div>
+          <!-- <div class="inputs">
+
+            <label for="numberInput">Enter Number:</label>
+            <input type="number" id="numberInput" oninput="convertValue()">
+
+            <label for="output">Converted Value:</label>
+            <input type="text" id="output" readonly>
+          </div> -->
       
       <div class="select" style="display: block;" id="Area">
         <div class="row">
           <div class="col-lg-6">
-              <select class="form-select select1" multiple aria-label="multiple select example">
-                <option value="1">Meter</option>
-                <option value="2">Kilometer</option>
-                <option value="3">Centimeter</option>
-                <option value="4">Millimeter</option>
-                <option value="5">Nanometer</option>
-                <option value="6">Micrometer</option>
-                <option value="7">Mile</option>
-                <option value="8">Yard</option>
-                <option value="9">Foot</option>
-                <option value="10">Inch</option>
-                <option value="11">Light Year</option>
-              </select>
+            <div class="converter">
+              <div class="from">
+                  <label class="value">
+                      From:
+                      <input type="number" id="from" autofocus>
+                  </label>
+                  <div class="units">
+                      <input type="radio" name="from" id="from1" value="1" checked>
+                      <label for="from1">mm</label>
+                      <input type="radio" name="from" id="from2" value="10">
+                      <label for="from2">cm</label>
+                      <input type="radio" name="from" id="from3" value="100">
+                      <label for="from3">dm</label>
+                      <input type="radio" name="from" id="from4" value="1000">
+                      <label for="from4">m</label>
+                      <input type="radio" name="from" id="from5" value="1000000">
+                      <label for="from5">km</label>
+                      <input type="radio" name="from" id="from6" value="25.4">
+                      <label for="from6">in</label>
+                      <input type="radio" name="from" id="from7" value="304.8">
+                      <label for="from7">ft</label>
+                      <input type="radio" name="from" id="from8" value="914.4">
+                      <label for="from8">yd</label>
+                      <input type="radio" name="from" id="from9" value="1609344">
+                      <label for="from9">mi</label>
+                  </div>
+              </div>
+              <div class="to">
+                  <label class="value">
+                      To:
+                      <input type="number" id="to" disabled>
+                  </label>
+                  <div class="units">
+                      <input type="radio" name="to" id="to1" value="1" checked>
+                      <label for="to1">mm</label>
+                      <input type="radio" name="to" id="to2" value="10">
+                      <label for="to2">cm</label>
+                      <input type="radio" name="to" id="to3" value="100">
+                      <label for="to3">dm</label>
+                      <input type="radio" name="to" id="to4" value="1000">
+                      <label for="to4">m</label>
+                      <input type="radio" name="to" id="to5" value="1000000">
+                      <label for="to5">km</label>
+                      <input type="radio" name="to" id="to6" value="25.4">
+                      <label for="to6">in</label>
+                      <input type="radio" name="to" id="to7" value="304.8">
+                      <label for="to7">ft</label>
+                      <input type="radio" name="to" id="to8" value="914.4">
+                      <label for="to8">yd</label>
+                      <input type="radio" name="to" id="to9" value="1609344">
+                      <label for="to9">mi</label>
+                  </div>
+              </div>
+            </div>
           </div>
-          <div class="col-lg-6">
-            <select class="form-select select2" multiple aria-label="multiple select example">
-                <option value="1">Meter</option>
-                <option value="2">Kilometer</option>
-                <option value="3">Centimeter</option>
-                <option value="4">Millimeter</option>
-                <option value="5">Nanometer</option>
-                <option value="6">Micrometer</option>
-                <option value="7">Mile</option>
-                <option value="8">Yard</option>
-                <option value="9">Foot</option>
-                <option value="10">Inch</option>
-                <option value="11">Light Year</option>
-          
-              </select>
-      
-          </div>
-        </div>
-        
-          
+         
+        </div>    
       </div>
       <!-- Length -->
       <div class="select" style="display: none;" id="Length">
@@ -142,62 +468,120 @@
         <div class="select" style="display: none;" id="Volume">
           <div class="row">
             <div class="col-lg-6">
-      
-              <select class="form-select" multiple aria-label="multiple select example">
-                <option value="1">Cubic Meter</option>
-                <option value="2">Cubic Kilometer</option>
-                <option value="3">Cubic Centimeter</option>
-                <option value="4">Cubic Millimeter</option>
-                <option value="5">Liter</option>
-                <option value="6">Milliliter</option>
-                <option value="7">US Gallon</option>
-                <option value="8">US Quart</option>
-                <option value="9">US Pint</option>
-                <option value="10">US Cup</option>
-                <option value="11">Us Fluid Ounce</option>
-                <option value="12">US Table Spoon</option>
-                <option value="13">US Tea Spoon </option>
-                <option value="14">Imperial Gallon</option>
-                <option value="15">Imperial Quart</option>
-                <option value="16">Imperial Pint</option>
-                <option value="17">Imperial Fluid Ounce</option>
-                <option value="18">Imperial Table Spoon</option>
-                <option value="19">Imperial Tea Spoon</option>
-                <option value="20">Cubic Mile</option>
-                <option value="21">Cubic Yard</option>
-                <option value="22">Cubic Foot</option>
-                <option value="23">Cubic Inch</option>
-                
-              </select>
+                <div class="converter">
+                  <div class="form">
+                    <label for="value">
+                      Form <input type="number" id="fromVolume" autofocus>
+                    </label>
+                    <div class="units1">
+                      <input type="radio" name="from" id="from1" value="1" checked>
+                      <label for="from1">Cubic Meter</label>
+                      <input type="radio" name="from" id="from2" value="1e+9">
+                      <label for="from2">Cubic Kilometer</label>
+                      <input type="radio" name="from" id="from3" value="1e-6">
+                      <label for="from3">Cubic Centimeter</label>
+                      <input type="radio" name="from" id="from4" value="1e-9">
+                      <label for="from4">Cubic Millimeter</label>
+                      <input type="radio" name="from" id="from5" value="0.001">
+                      <label for="from5">Liter</label>
+                      <input type="radio" name="from" id="from6" value="1e-6">
+                      <label for="from6">Milliliter</label>
+                      <input type="radio" name="from" id="from7" value="0.00378541">
+                      <label for="from7">US Gallon</label>
+                      <input type="radio" name="from" id="from8" value="0.000946353">
+                      <label for="from8">US Quart</label>
+                      <input type="radio" name="from" id="from9" value="0.000473176">
+                      <label for="from9">US Pint</label>
+                      <input type="radio" name="from" id="from10" value="0.000236588">
+                      <label for="from10">US Cup</label>
+                      <input type="radio" name="from" id="from11" value="2.9574e-5">
+                      <label for="from11">US Fluid Ounce</label>
+                      <input type="radio" name="from" id="from12" value="1.4787e-5">
+                      <label for="from12">US Table Spoon</label>
+                      <input type="radio" name="from" id="from13" value="4.9289e-6">
+                      <label for="from13">US Tea Spoon</label>
+                      <input type="radio" name="from" id="from14" value="0.00454609">
+                      <label for="from14">Imperial Gallon</label>
+                      <input type="radio" name="from" id="from15" value="0.00113652">
+                      <label for="from15">Imperial Quart</label>
+                      <input type="radio" name="from" id="from16" value="0.000568261">
+                      <label for="from16">Imperial Pint</label>
+                      <input type="radio" name="from" id="from17" value="2.8413e-5">
+                      <label for="from17">Imperial Fluid Ounce</label>
+                      <input type="radio" name="from" id="from18" value="1.7758e-5">
+                      <label for="from18">Imperial Table Spoon</label>
+                      <input type="radio" name="from" id="from19" value="5.9194e-6">
+                      <label for="from19">Imperial Tea Spoon</label>
+                      <input type="radio" name="from" id="from20" value="4.16818e+9">
+                      <label for="from20">Cubic Mile</label>
+                      <input type="radio" name="from" id="from21" value="0.764555">
+                      <label for="from21">Cubic Yard</label>
+                      <input type="radio" name="from" id="from22" value="0.0283168">
+                      <label for="from22">Cubic Foot</label>
+                      <input type="radio" name="from" id="from23" value="1.6387e-5">
+                      <label for="from23">Cubic Inch</label>
+                  </div>
+                  
+                  <div class="to">
+                      <label class="value">
+                          To:
+                          <input type="number" id="toVolume" disabled>
+                      </label>
+                      <div class="units1">
+                          <input type="radio" name="to" id="to1" value="1" checked>
+                          <label for="to1">Cubic Meter</label>
+                          <input type="radio" name="to" id="to2" value="1e+9">
+                          <label for="to2">Cubic Kilometer</label>
+                          <input type="radio" name="to" id="to3" value="1e-6">
+                          <label for="to3">Cubic Centimeter</label>
+                          <input type="radio" name="to" id="to4" value="1e-9">
+                          <label for="to4">Cubic Millimeter</label>
+                          <input type="radio" name="to" id="to5" value="0.001">
+                          <label for="to5">Liter</label>
+                          <input type="radio" name="to" id="to6" value="1e-6">
+                          <label for="to6">Milliliter</label>
+                          <input type="radio" name="to" id="to7" value="0.00378541">
+                          <label for="to7">US Gallon</label>
+                          <input type="radio" name="to" id="to8" value="0.000946353">
+                          <label for="to8">US Quart</label>
+                          <input type="radio" name="to" id="to9" value="0.000473176">
+                          <label for="to9">US Pint</label>
+                          <input type="radio" name="to" id="to10" value="0.000236588">
+                          <label for="to10">US Cup</label>
+                          <input type="radio" name="to" id="to11" value="2.9574e-5">
+                          <label for="to11">US Fluid Ounce</label>
+                          <input type="radio" name="to" id="to12" value="1.4787e-5">
+                          <label for="to12">US Table Spoon</label>
+                          <input type="radio" name="to" id="to13" value="4.9289e-6">
+                          <label for="to13">US Tea Spoon</label>
+                          <input type="radio" name="to" id="to14" value="0.00454609">
+                          <label for="to14">Imperial Gallon</label>
+                          <input type="radio" name="to" id="to15" value="0.00113652">
+                          <label for="to15">Imperial Quart</label>
+                          <input type="radio" name="to" id="to16" value="0.000568261">
+                          <label for="to16">Imperial Pint</label>
+                          <input type="radio" name="to" id="to17" value="2.8413e-5">
+                          <label for="to17">Imperial Fluid Ounce</label>
+                          <input type="radio" name="to" id="to18" value="1.7758e-5">
+                          <label for="to18">Imperial Table Spoon</label>
+                          <input type="radio" name="to" id="to19" value="5.9194e-6">
+                          <label for="to19">Imperial Tea Spoon</label>
+                          <input type="radio" name="to" id="to20" value="4.16818e+9">
+                          <label for="to20">Cubic Mile</label>
+                          <input type="radio" name="to" id="to21" value="0.764555">
+                          <label for="to21">Cubic Yard</label>
+                          <input type="radio" name="to" id="to22" value="0.0283168">
+                          <label for="to22">Cubic Foot</label>
+                          <input type="radio" name="to" id="to23" value="1.6387e-5">
+                          <label for="to23">Cubic Inch</label>
+                      </div>
+                  </div>
+                  
+                  </div>
+                </div>
             </div>
-            <div class="col-lg-6">
-      
-              <select class="form-select" multiple aria-label="multiple select example">
-                <option value="1">Cubic Meter</option>
-                <option value="2">Cubic Kilometer</option>
-                <option value="3">Cubic Centimeter</option>
-                <option value="4">Cubic Millimeter</option>
-                <option value="5">Liter</option>
-                <option value="6">Milliliter</option>
-                <option value="7">US Gallon</option>
-                <option value="8">US Quart</option>
-                <option value="9">US Pint</option>
-                <option value="10">US Cup</option>
-                <option value="11">Us Fluid Ounce</option>
-                <option value="12">US Table Spoon</option>
-                <option value="13">US Tea Spoon </option>
-                <option value="14">Imperial Gallon</option>
-                <option value="15">Imperial Quart</option>
-                <option value="16">Imperial Pint</option>
-                <option value="17">Imperial Fluid Ounce</option>
-                <option value="18">Iblemperial Table Spoon</option>
-                <option value="19">Imperial Tea Spoon</option>
-                <option value="20">Cubic Mile</option>
-                <option value="21">Cubic Yard</option>
-                <option value="22">Cubic Foot</option>
-                <option value="23">Cubic Inch</option>
-              
-              </select>
+            </div>
+            
             </div>
           </div>
           
@@ -242,22 +626,34 @@
             <!-- temptature  -->
             <div class="select" style="display: none;" id="Temperature">
               <div class="row">
-                <div class="col-lg-6">
-      
-                  <select class="form-select" multiple aria-label="multiple select example">
-                  <option value="1">Celsius</option>
-                  <option value="2">Kelvin</option>
-                  <option value="3">Fahrenhiet</option>
-                  </select>
-                </div>
-                <div class="col-lg-6">
-      
-                  <select class="form-select" multiple aria-label="multiple select example">
-                  <option value="1">Celsius</option>
-                  <option value="2">Kelvin</option>
-                  <option value="3">Fahrenhiet</option>
-                  </select>
-                </div>
+                <div class="col-lg-6 temp">
+                    <!-- <div class="wrapper" style="width: 100%;"> -->
+                      <div class="conv">
+                      <!-- <div class="card"> -->
+
+                        <header>Temperature Converter</header>
+                        
+                        <div>
+                          <div class="temp-fields">
+                            <h3 class="spacing">Celsius</h3>
+                            <input id="celsius" value="0"/>
+                          </div><br>
+                          <div class="temp-fields">
+                            <h3 class="spacing">Fahrenheit</h3>
+                            <input id="fahrenheit" value="0"/>
+                          </div><br>
+                          <div class="temp-fields">
+                            <h3 class="spacing">Kelvin</h3>
+                            <input id="kelvin" value="0"/>
+                          </div>
+                        <div>
+                          <button id="submit" class="spacing" type="submit" value="submit">Convert</button>
+                          <button id="reset" class="spacing" type="reset" value="reset">Reset</button>
+                          <br><br>
+                        </div>
+                      </div>
+                    <!-- </div> -->
+                  </div>
               </div>
               
               </div>
@@ -271,7 +667,93 @@
 
 </div>
 
+
 <script>
+  const inputField = document.querySelector('#from1');
+const outputField = document.querySelector('#to1');
+const units = document.querySelectorAll('.units1 input');
+
+const getInputValue = () => Number(inputField.value);
+
+const isValidValue = inputValue => !Number.isNaN(inputValue) && inputValue >= 0;
+
+const showError = () => {
+	inputField.classList.add('error');
+	outputField.value = '';
+};
+
+const getOutput = inputValue => {
+	const inputUnit = document.querySelector('.from .units input:checked');
+	const inputValueInMillimeters = inputValue * Number(inputUnit.value);
+	const outputUnit = document.querySelector('.to .units input:checked');
+	const outputValue = inputValueInMillimeters / Number(outputUnit.value);
+	outputField.value = outputValue;
+};
+
+const convert = () => {
+	const inputValue = getInputValue();
+	inputField.focus();
+	if (!isValidValue(inputValue)) {
+		showError();
+		return;
+	}
+	inputField.classList.remove('error');
+	getOutput(inputValue);
+};
+
+inputField.addEventListener('input', convert);
+units.forEach(unit => unit.addEventListener('change', convert));
+
+// temprature check
+
+</script>
+
+<!-- <script>
+  const conversionFactors = {
+  // Volume
+  "1": 1,                   // Cubic Meter
+  "2": 0.000000000001,      // Cubic Kilometer
+  "3": 1000000,             // Cubic Centimeter
+  "4": 1000000000,          // Cubic Millimeter
+  "5": 1000,                // Liter
+  "6": 1000000,             // Milliliter
+  "7": 264.172,             // US Gallon
+  "8": 1056.69,             // US Quart
+  "9": 2113.38,             // US Pint
+  "10": 4166.67,            // US Cup
+  "11": 33814,              // US Fluid Ounce
+  "12": 67628.045,          // US Table Spoon
+  "13": 202884.136,         // US Tea Spoon
+  "14": 219.969,            // Imperial Gallon
+  "15": 879.877,            // Imperial Quart
+  "16": 1759.75,            // Imperial Pint
+  "17": 3519.51,            // Imperial Fluid Ounce
+  "18": 56320.8,            // Imperial Table Spoon
+  "19": 168962.4,           // Imperial Tea Spoon
+  "20": 0.000000000239912,  // Cubic Mile
+  "21": 1.30795,            // Cubic Yard
+  "22": 35.3147,            // Cubic Foot
+  "23": 61023.7,            // Cubic Inch
+};
+
+function convertValue() {
+  // Get the user input from the input field
+  const userInput = document.getElementById("numberInput").value;
+  
+  // You can set the target unit here based on your requirements
+  const targetUnit = "5"; // "Liter"
+
+  // Perform the conversion
+  const convertedValue = userInput * conversionFactors[targetUnit];
+
+  // Display the converted value in the output field
+  document.getElementById("output").value = convertedValue;
+}
+
+// Initial conversion when the page loads
+convertValue();
+</script> -->
+<!-- <script>
   function updateResult() {
     const val1 = parseFloat(document.getElementById('val1').value) || 0;
     const val2 = parseFloat(document.getElementById('val2').value) || 0;
@@ -301,7 +783,9 @@
   
   const selectElements = document.querySelectorAll('select');
   selectElements.forEach(select => select.addEventListener('change', handleSelectChange));
-</script>
+</script> -->
+
 <script src="./JS/Metric Conversion.JS"></script>
+<script src="temp.js"></script>
 </body>
 </html>
