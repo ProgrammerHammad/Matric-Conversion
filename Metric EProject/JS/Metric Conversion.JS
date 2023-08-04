@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-$(".nav-link").click(function(){
-    var divid = $(this).text();
-    $("#"+divid).css("display","block");
-    $(this).classList.remove('select');
-    
-})
-=======
 function handleNavClick(event) {
     event.preventDefault();
     
@@ -25,4 +17,3 @@ function handleNavClick(event) {
 
 
 
->>>>>>> e6b2299633b920c89119e26559438e95631844e7
