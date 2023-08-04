@@ -366,43 +366,7 @@
       </script>
       </div>
 
-      <div id="chart_div55" style="width: 100%; height: 400px;">
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-        <script type="text/javascript">
-          // Step 2: Define the data for the conversion from acres to hectares
-          var data = google.visualization.arrayToDataTable([
-            ['Acres', 'Hectares'],
-            [0, 0],
-            [1, 0.404686],
-            [2, 0.809372],
-            [3, 1.214058],
-            [4, 1.618744],
-            [5, 2.02343],
-            [6, 2.428116],
-            [7, 2.832802],
-            [8, 3.237488],
-            [9, 3.642174],
-            [10, 4.04686]
-            // Add more data points as needed
-          ]);
       
-          // Step 3: Draw the line chart using Google Charts
-          google.charts.load('current', {'packages':['corechart']});
-          google.charts.setOnLoadCallback(drawChart);
-      
-          function drawChart() {
-            var options = {
-              title: 'Acres to Hectares Conversion',
-              curveType: 'function',
-              legend: { position: 'bottom' }
-            };
-      
-            var chart = new google.visualization.LineChart(document.getElementById('chart_div55'));
-            chart.draw(data, options);
-          }
-        </script>
-      </div>
-
 
 
 
