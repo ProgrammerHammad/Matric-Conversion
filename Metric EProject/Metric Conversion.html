@@ -97,7 +97,7 @@
       <div class="select" style="display: block;" id="Area">
         <div class="row">
           <div class="col-lg-6">
-              <select class="form-select select1" multiple aria-label="multiple select example">
+              <select class="form-select Areaselect1" multiple aria-label="multiple select example">
                 <option value="1">Square Meter</option>
                 <option value="2">Square Kilometer</option>
                 <option value="3">Square Centimeter</option>
@@ -112,7 +112,7 @@
               </select>
           </div>
           <div class="col-lg-6">
-            <select class="form-select select2" multiple aria-label="multiple select example">
+            <select class="form-select Areaselect2" multiple aria-label="multiple select example">
                 <option value="1">Square Meter</option>
                 <option value="2">Square Kilometer</option>
                 <option value="3">Square Centimeter</option>
@@ -136,7 +136,7 @@
       <div class="select" style="display: none;" id="Length">
         <div class="row">
           <div class="col-lg-6">
-            <select class="form-select" multiple aria-label="multiple select example">
+            <select class="form-select Lengthselect1" multiple aria-label="multiple select example">
               <option value="1">Meter</option>
               <option value="2">Kilometer</option>
               <option value="3">Centimeter</option>
@@ -152,7 +152,7 @@
       
           </div>
           <div class="col-lg-6">
-            <select class="form-select" multiple aria-label="multiple select example">
+            <select class="form-select Lengthselect2" multiple aria-label="multiple select example">
               <option value="1">Meter</option>
               <option value="2">Kilometer</option>
               <option value="3">Centimeter</option>
@@ -176,7 +176,7 @@
           <div class="row">
             <div class="col-lg-6">
       
-              <select class="form-select" multiple aria-label="multiple select example">
+              <select class="form-select Volumeselect1" multiple aria-label="multiple select example">
                 <option value="1">Cubic Meter</option>
                 <option value="2">Cubic Kilometer</option>
                 <option value="3">Cubic Centimeter</option>
@@ -205,7 +205,7 @@
             </div>
             <div class="col-lg-6">
       
-              <select class="form-select" multiple aria-label="multiple select example">
+              <select class="form-select Volumeselect2" multiple aria-label="multiple select example">
                 <option value="1">Cubic Meter</option>
                 <option value="2">Cubic Kilometer</option>
                 <option value="3">Cubic Centimeter</option>
@@ -239,7 +239,7 @@
            <div class="select" style="display: none;" id="Mass">
             <div class="row">
               <div class="col-lg-6">
-                <select class="form-select" multiple aria-label="multiple select example">
+                <select class="form-select Massselect1" multiple aria-label="multiple select example">
                   <option value="1">Kilo Gram</option>
                   <option value="2">Gram</option>
                   <option value="3"> Miligram</option>
@@ -254,7 +254,7 @@
       
               </div>
               <div class="col-lg-6">
-                <select class="form-select" multiple aria-label="multiple select example">
+                <select class="form-select Massselect2" multiple aria-label="multiple select example">
                   <option value="1">Kilo Gram</option>
                   <option value="2">Gram</option>
                   <option value="3"> Miligram</option>
@@ -273,11 +273,11 @@
             
             </div>
             <!-- temptature  -->
-            <div class="select" style="display: none;" id="Temperature">
+            <!-- <div class="select" style="display: none;" id="Temperature">
               <div class="row">
                 <div class="col-lg-6">
       
-                  <select class="form-select" multiple aria-label="multiple select example">
+                  <select class="form-select Temperatureselect1" multiple aria-label="multiple select example">
                   <option value="1">Celsius</option>
                   <option value="2">Kelvin</option>
                   <option value="3">Fahrenhiet</option>
@@ -285,7 +285,7 @@
                 </div>
                 <div class="col-lg-6">
       
-                  <select class="form-select" multiple aria-label="multiple select example">
+                  <select class="form-select Temperatureselect2" multiple aria-label="multiple select example">
                   <option value="1">Celsius</option>
                   <option value="2">Kelvin</option>
                   <option value="3">Fahrenhiet</option>
@@ -293,7 +293,41 @@
                 </div>
               </div>
               
-              </div>
+              </div> -->
+
+              <div class="select" style="display: none;" id="Temperature">
+                <div class="row">
+                  <div class="col-lg-3 mx-auto  temp">
+                      <!-- <div class="wrapper" style="width: 100%;"> -->
+                        <div class="conv">
+                        <!-- <div class="card"> -->
+  
+                          
+                          <div>
+                            <div class="temp-fields">
+                              <h3 class="spacing">Celsius</h3>
+                              <input id="celsius" value="0"/>
+                            </div><br>
+                            <div class="temp-fields">
+                              <h3 class="spacing">Fahrenheit</h3>
+                              <input id="fahrenheit" value="0"/>
+                            </div><br>
+                            <div class="temp-fields">
+                              <h3 class="spacing">Kelvin</h3>
+                              <input id="kelvin" value="0"/>
+                            </div>
+                          <div class="d-flex">
+                            <button id="submit" class="btn btn-dark spacing" type="submit" value="submit">Convert</button>
+                            <button id="reset" class="btn btn-dark spacing ms-2" type="reset" value="reset">Reset</button>
+                            <br><br>
+                          </div>
+                        </div>
+                      <!-- </div> -->
+                    </div>
+                </div>
+                
+                </div>
+            </div>
           </div>
 
     </div>
@@ -402,7 +436,7 @@
   <!-- Copyright -->
 </footer>
 
-
+<script src="./temp.js"></script>
 
 
 

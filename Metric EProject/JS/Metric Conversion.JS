@@ -1,16 +1,23 @@
+ navText = "";
 function handleNavClick(event) {
-    event.preventDefault();
-    
-    const allSelectDivs = document.querySelectorAll('.select');
-    allSelectDivs.forEach(div => div.style.display = 'none');
-    
-    const navText = event.target.textContent.trim();
-    console.log(navText);
-    const targetDiv = document.getElementById(navText);
-    if (targetDiv) {
-      targetDiv.style.display = 'block';
-    }
+  event.preventDefault();
+
+  $('.select').hide();
+
+  navText = event.target.textContent.trim();
+  const targetDiv = $('#' + navText);
+  if(navText == "Temperature"){
+    $("#cvtbtn").hide();
   }
+  else{
+    $("#cvtbtn").show();
+  }
+
+
+  if (targetDiv.length) {
+    targetDiv.show();
+  }
+}
   
   const navLinks = document.querySelectorAll('#link1');
   navLinks.forEach(link => link.addEventListener('click', handleNavClick));
@@ -33,8 +40,8 @@ area = [
 $("#cvtbtn").click(function(){
   val1 = $("#val1").val(); 
   val2 = $("#val2").val(); 
-  select1 = $(".select1").val();
-  select2 = $(".select2").val();
+  select1 = $("."+navText+"select1").val();
+  select2 = $("."+navText+"select2").val();
   // select2[0] = parseInt(select2[0]) - 1;
   console.log(select2);
 
