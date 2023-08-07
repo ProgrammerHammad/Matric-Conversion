@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js" integrity="sha512-3dZ9wIrMMij8rOH7X3kLfXAzwtcHpuYpEgQg1OA4QAob1e81H8ntUQmQm3pBudqIoySO5j0tHN4ENzA6+n2r4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <link rel="stylesheet" href="CSS/Home.css">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -16,34 +14,56 @@
 
 </head>
 <body>
-  <div class="one">
+  <div class="container-fluid one">
     <img class="NavImg" src="Images/pngwing.com.png" alt="" >
     <a href="Home.html"><h1> Metric Units Conversion</h1></a>
   </div>
-  
-  <div class="navbar">
-    <div class="navA">
-        <ul>
-            <li><a href="Home.html"> Home </a></li>
-            <li><a href="Metric Conversion.html"> Metric Conversion</a></li>
-            <li><a href="History.html"> History </a></li>
-            <li><a href="Article.html"> Article</a></li>
-            <li><a href="FAQs.html"> FAQs </a></li>
-        </ul>
+
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+    
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          
+          <li class="nav-item">
+            <a class="nav-link" href="C:\Users\Hammd Elahi\OneDrive\Documents\GitHub\Matric-Conversion\Metric EProject\Home.html">Home </a>
+          </li>
+           
+          <li class="nav-item">
+            <a class="nav-link" href="C:\Users\Hammd Elahi\OneDrive\Documents\GitHub\Matric-Conversion\Metric EProject\Metric Conversion.html">Metric Conversion</a>
+          </li>
+           
+          <li class="nav-item">
+            <a class="nav-link" href="C:\Users\Hammd Elahi\OneDrive\Documents\GitHub\Matric-Conversion\Metric EProject\History.html">History</a>
+          </li>
+           
+          <li class="nav-item">
+            <a class="nav-link" href="C:\Users\Hammd Elahi\OneDrive\Documents\GitHub\Matric-Conversion\Metric EProject\Article.html">Article</a>
+          </li>
+           
+          <li class="nav-item">
+            <a class="nav-link" href="C:\Users\Hammd Elahi\OneDrive\Documents\GitHub\Matric-Conversion\Metric EProject\FAQs.html">FAQs</a>
+          </li>
+    
+    
+      </div>
     </div>
-</div>
+  </nav>
 
 <div class="back">
 
+  
 <img id="ImageB" src="Images/construction-tape-measure-is-held-by-worker-measures-space-project-dirty-white-work-gloves-hand-presentation-slide-place-text-design_79276-375.avif" alt="">
              <h5 id="Hed1">What Is Metric System?</h5> <br>
              <div class="Par1"><p id="Par1"> <span>"</span>Everything around us, right from the amount of sugar you add to a cake to the length of a football field, has a value of the measurement. We measure each object according to its length, weight, volume, or time in a different manner. The concept of <span>"Metric System"</span> is introduced with these measurements. By definition, the metric system of measurement in mathematics is the set of standard units defined to measure length, weight, area, and capacity. It is based on the decimal system as it includes numbers in powers of 10 <span>"</span>.</p></div>
              </div>
-
 <div class="MainH1"> <h2>Length Conversion Charts </h2></div>
 
 <div data-aos="fade-up">
-
+  <div class="container-fluid">
       <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
       <script type="text/javascript">
       
@@ -83,6 +103,7 @@
       <div class="ChartP"> <p> The process to convert mm to inches is quite simple. To convert mm to inches, you must multiply the unit by 0.039. So, for example, if you want to convert 50 mm to inches, you need to multiply 50 with 0.039.
       </p></div>
 </div>
+</div>
 
 
 <div data-aos="fade-up">
@@ -106,7 +127,8 @@
                   hAxis: { title: 'Miles' },
                   vAxis: { title: 'Kilometers' },
                   legend: 'none',
-                  curveType: 'function'
+                  curveType: 'function',
+                  backgroundColor: 'transparent'
               };
   
               var chart = new google.visualization.LineChart(document.getElementById('chart_div4'));
@@ -150,7 +172,8 @@
             vAxis: {
               title: 'Meters'
             },
-            legend: 'none'
+            legend: 'none',
+            backgroundColor: 'transparent'
           };
       
           var chart = new google.visualization.LineChart(document.getElementById('chart_div3'));
@@ -163,7 +186,7 @@
       
 
 <div data-aos="fade-up">
-      <div id="chart_div"></div>
+      <div id="chart_div">
 
       <script type="text/javascript">
         google.charts.load('current', { 'packages': ['corechart'] });
@@ -198,6 +221,7 @@
               title: 'Meters',
             },
             legend: 'none',
+            backgroundColor: 'transparent'
           };
     
           var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
@@ -205,16 +229,17 @@
         }
       </script>
 </div>
-
+</div>
 <div class="ChartP"> <p> To convert a measurement in feet to a measurement in meters, multiply the length by the following conversion ratio: 0.3048 meters/foot. </p></div>
       
 
-
+<div data-aos="fade-up">
 <div class="MainH1"> <h2>Area Conversion Charts </h2></div>
+</div>
 
-
-<div id="chart_div11" style="width: 100%; height: 400px;">
-  <title>Square Inches to Square Millimeters Conversion Chart</title>
+<div data-aos="fade-up">
+<div id="chart_div11" style="width: 100%; height: 400px; color: white; margin: auto;">
+  <title>Square Inches to Square Millimeters Conversion</title>
   <!-- Load Google Charts library -->
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="text/javascript">
@@ -238,7 +263,8 @@
         title: 'Square Inches to Square Millimeters Conversion',
         hAxis: { title: 'Square Inches', minValue: 0, maxValue: 10 },
         vAxis: { title: 'Square Millimeters', minValue: 0, maxValue: 3500 },
-        legend: 'none'
+        legend: 'none',
+        backgroundColor: 'transparent',
       };
 
       var chart = new google.visualization.LineChart(document.getElementById('chart_div11'));
@@ -246,9 +272,12 @@
     }
   </script>
   </div>
+  <div class="ChartP"> <p> 1 square Inches (in^2) is equal to 645.160624 square millimeters (mm^2). Conversely, 1 square millimeters (mm^2) is equal to 1.5500016×10^-3 square Inches (in^2). </p></div>
+</div>
 
 
-  <div id="chart_12" style="width: 1100px; height: 200px;">
+<div data-aos="fade-up">
+  <div id="chart_12" style="width: 1100px; height: 200px; margin: auto;">
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
   <script type="text/javascript">
@@ -279,7 +308,8 @@
       var options = {
         title: 'Square Feet to Square Meters Conversion',
         curveType: 'function',
-        legend: { position: 'bottom' }
+        legend: { position: 'bottom' },
+        backgroundColor: 'transparent'
       };
   
       // Instantiate and draw our chart, passing in some options.
@@ -287,11 +317,12 @@
       chart.draw(data, options);
     }
   </script>
-  
   </div>
+  <div class="ChartP"> <p> 1 square Inches (in^2) is equal to 645.160624 square millimeters (mm^2). Conversely, 1 square millimeters (mm^2) is equal to 1.5500016×10^-3 square Inches (in^2). </p></div>
+</div>
 
 
-  <div id="chart_div13" style="width: 100%; height: 500px;">
+  <div id="chart_div13" style="width: 100%; height: 500px; margin: auto;">
       <title>Square Yards to Square Meters Conversion Chart</title>
       <!-- Include Google Charts library -->
       <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -319,7 +350,8 @@
                   title: 'Square Yards to Square Meters Conversion',
                   hAxis: { title: 'Square Yards' },
                   vAxis: { title: 'Square Meters' },
-                  legend: 'none'
+                  legend: 'none',
+                  backgroundColor: 'transparent'
               };
   
               var chart = new google.visualization.LineChart(document.getElementById('chart_div13'));
@@ -327,9 +359,9 @@
           }
       </script>
       </div>
-  
+      <div class="ChartP"> <p>To convert square yard to square meter, you have to multiply the unit by 0.836. For example, if you want to convert 5 square yard to square meter, you have to multiply 5 with 0.836. </p></div>
 
-      <div id="chart_div14" style="width: 1100px; height: 300px;">
+      <div id="chart_div14" style="width: 1100px; height: 300px; margin: auto;">
       <title>Square Miles to Square Kilometers Conversion</title>
       <!-- Include the Google Charts API -->
       <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>      
@@ -358,6 +390,7 @@
             },
             legend: 'none',
             pointSize: 10,
+            backgroundColor: 'transparent'
           };
     
           var chart = new google.visualization.LineChart(document.getElementById('chart_div14'));
@@ -365,7 +398,7 @@
         }
       </script>
       </div>
-
+      <div class="ChartP"> <p>The value of 1 square mile equals 2.59 square kilometers. To convert a square mile to a square kilometer, we have to multiply the given value of a square mile by a factor of 2.59. For example, 3 square miles are converted into the square meters as 3 × 2.59 = 7.77 square kilometers. </p></div>
       
 
 
@@ -377,9 +410,9 @@
       </div>      
 
       
-        
+      <div class="Container-fulid"> 
       <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-      <div id="conversionChart" style="width: 100%; height: 400px;">
+      <div id="conversionChart" style="width: 100%; height: 400px; margin: auto;">
         <script type="text/javascript">
           google.charts.load('current', {'packages':['corechart']});
           google.charts.setOnLoadCallback(drawConversionChart);
@@ -401,6 +434,7 @@
               vAxis: {title: 'Liters'},
               legend: 'none',
               pointSize: 5,
+              backgroundColor: 'transparent'
             };
         
             var chart = new google.visualization.LineChart(document.getElementById('conversionChart'));
@@ -410,14 +444,14 @@
         
       </div>
 
-
+      <div class="ChartP"> <p>This means that one gallon is equal to approximately 3.78541 litres. </p></div>
 
       <div data-aos="fade-up">
       <title>Fluid Ounces to Millimeters Conversion Chart</title>
       <!-- Load the Google Charts library -->
       <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
       <!-- Your chart will be rendered here -->
-      <div id="chart_div22" style="width: 100%; height: 400px;">
+      <div id="chart_div22" style="width: 100%; height: 400px; margin: auto;">
     
       <script type="text/javascript">
         var data = [
@@ -440,6 +474,7 @@
             hAxis: { title: 'Fluid Ounces' },
             vAxis: { title: 'Millimeters' },
             legend: 'none',
+            backgroundColor: 'transparent'
           };
     
           var chart = new google.visualization.LineChart(document.getElementById('chart_div22'));
@@ -449,9 +484,10 @@
       </div>
       </div>
 
+      <div class="ChartP"> <p> fluid ounce (fl oz) is equal to approximately 29.57 milliliters (ml). This is the standard conversion for fluid ounces to milliliters. </p></div>
 
       <div data-aos="fade-up">
-      <div id="chart_div23" style="width: 1000px; height: 400px;">
+      <div id="chart_div23" style="width: 1000px; height: 400px; margin: auto;">
       <title>Cubic Feet to Cubic Meters Conversion Chart</title>
       <!-- Include Google Charts library -->
       <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -473,7 +509,8 @@
               var options = {
                   title: 'Cubic Feet to Cubic Meters Conversion',
                   curveType: 'function',
-                  legend: { position: 'bottom' }
+                  legend: { position: 'bottom' },
+                  backgroundColor: 'transparent'
               };
   
               var chart = new google.visualization.LineChart(document.getElementById('chart_div23'));
@@ -483,10 +520,10 @@
       </script>
       </div>
 </div>
-
+<div class="ChartP"> <p>The value of 1 cubic foot equals 0.028 cubic meters. To convert cubic feet to cubic meters, we have to multiply the given value of cubic feet by a factor of 0.028. For example, 10 cubic feet are converted into cubic inches as 10 × 0.028 = 0.28 cubic meters.</p></div>
 
 <div data-aos="fade-up">
-      <div id="chart_div24" style="width: 1000px; height: 200px;">
+      <div id="chart_div24" style="width: 1000px; height: 200px; margin: auto;">
     
   <title>Cubic Yards to Cubic Meters Conversion Chart</title>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -516,6 +553,7 @@
       hAxis: {title: 'Cubic Yards'},
       vAxis: {title: 'Cubic Meters'},
       legend: 'none',
+      backgroundColor: 'transparent'
     };
 
     var chart = new google.visualization.LineChart(document.getElementById('chart_div24'));
@@ -525,11 +563,15 @@
       </div>
       </div>
     
+      <div class="ChartP"> <p>The relationship between cubic yards and cubic meters is given as follows: 1 cubic yard = 0.7645549 cubic meters. 1 cubic meter ≈ 1.31 cubic yards </p></div>      
+      
+      
       <div data-aos="fade-up">
+
         <div class="MainH1"> <h3>Mass Conversion Charts </h3> </div>
         </div>      
 
-        <div id="chart_div31" style="width: 100%; height: 400px;">
+        <div id="chart_div31" style="width: 100%; height: 400px; margin: auto;">
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <title>Ounces to Grams Conversion Chart</title>
@@ -566,6 +608,7 @@
                   title: 'Grams',
                   minValue: 0,
                 },
+                backgroundColor: 'transparent'
               };
         
               var chart = new google.visualization.LineChart(document.getElementById('chart_div31'));
@@ -574,10 +617,11 @@
           </script>
           </div>
         </div>
+        <div class="ChartP"> <p>28.34952 grams make up one ounce (oz). You may get the answer in grams by multiplying the number of ounces by 28.34952. </p></div>
         
 
 
-        <div id="chart_div32" style="width: 100%; height: 500px;"></div>
+        <div id="chart_div32" style="width: 100%; height: 500px; margin: auto;"></div>
   <title>Pounds to Kilograms Conversion Chart</title>
   <!-- Load Google Charts Library -->
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -621,7 +665,8 @@
         curveType: 'function',
         legend: { position: 'bottom' },
         vAxis: { title: 'Kilograms' },
-        hAxis: { title: 'Pounds' }
+        hAxis: { title: 'Pounds' },
+        backgroundColor: 'transparent'
       };
 
       // Instantiate and draw our chart, passing in some options.
@@ -630,9 +675,10 @@
     }
   </script>
   </div>
+  <div class="ChartP"> <p>One pound is approximately equal to 0.45359237 kilograms (kg). The conversion of the pound to kilograms is done by multiplying the given pound value and 0.45359237. Also, one kilogram is approximately equal to 2.2046226218 lbs.</p></div>
 
 
-  <div id="chart_div33" style="width: 100%; height: 500px;">
+  <div id="chart_div33" style="width: 100%; height: 500px; margin: auto;">
   <title>Pounds to Megagrams Conversion Chart</title>
     <!-- Load Google Charts API -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -664,7 +710,8 @@
                 vAxis: {
                     title: 'Megagrams'
                 },
-                legend: 'none'
+                legend: 'none',
+                backgroundColor: 'transparent'
             };
 
             var chart = new google.visualization.LineChart(document.getElementById('chart_div33'));
@@ -673,12 +720,14 @@
     </script>
     </div>
 
+    <div class="ChartP"> <p>The weight in milligrams is equal to the weight in pounds multiplied by 453,592.37.</p></div>
+
 
 
     <div class="MainH1"> <h2>Temperature Conversion Charts </h2></div>
 
 
-    <div id="chart_div41" style="width: 100%; height: 500px;">
+    <div id="chart_div41" style="width: 100%; height: 500px; margin: auto;">
     <title>Fahrenheit to Celsius Conversion Chart</title>
     <!-- Load the Google Charts Library -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -706,7 +755,8 @@
               title: 'Fahrenheit to Celsius Conversion Chart',
               hAxis: {title: 'Fahrenheit'},
               vAxis: {title: 'Celsius'},
-              legend: 'none'
+              legend: 'none',
+              backgroundColor: 'transparent'
           };
   
           // Instantiate and draw the chart, passing in the options.
@@ -715,6 +765,9 @@
       }
   </script>
   </div>
+
+  <div class="ChartP"> <p>First subtract 32 from the given Fahrenheit temperature. Step 2: Now multiply the difference value obtained in step 1 by 5. Step 3: Finally, divide the product value obtained in step 2 by 9. </p></div>
+
 
   <div id="chart_div42">
   <title>Celsius to Fahrenheit Conversion Chart</title>
@@ -747,7 +800,8 @@
         var options = {
           title: 'Celsius to Fahrenheit Conversion Chart',
           hAxis: { title: 'Celsius' },
-          vAxis: { title: 'Fahrenheit' }
+          vAxis: { title: 'Fahrenheit' },
+          backgroundColor: 'transparent'
         };
     
         // Create and draw the chart
@@ -762,7 +816,7 @@
     </script>
     
   </div>
-
+<div class="ChartP"> <p>You need to multiply the °C temperature by 9/5 and add 32 to it. The result will be in °F. </p></div>
 
   
 
@@ -774,16 +828,8 @@
 
 <footer class="text-center text-white" style="background-color: #f1f1f1;">
   <div class="container pt-4">
-
-      <div class="Footlink">
-          <ul>
-              <li><a href="Home.html"> Home </a></li>
-              <li><a href="Metric Conversion.html"> Metric Conversion</a></li>
-              <li><a href="History.html"> History </a></li>
-              <li><a href="Article.html"> Article</a></li>
-              <li><a href="FAQs.html"> FAQs </a></li>
-          </ul>
-      </div>
+<div class="container-fulid">
+ <a href="C:\Users\Hammd Elahi\OneDrive\Documents\GitHub\Matric-Conversion\Metric EProject\Home.html"><h4> Units Metric Conversion</h4> </a>
     <section class="mb-4">
       <!-- Facebook -->
       <a
@@ -837,8 +883,8 @@
   <!-- Grid container -->
 
   <!-- Copyright -->
-  <div class=" copy" class="text-center text-dark p-3" style="background-color: rgba(27, 27, 27, 0.616);">
-    © 2020 Copyright: APTECH lt
+  <div class="copy" class="text-center" style=" color: rgb(238, 167, 0); font-weight: 500;">
+    ©2023 Copyright: APTECH lt
   </div>
   <!-- Copyright -->
 </footer>

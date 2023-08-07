@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="CSS/MetricConversion.css">
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
@@ -16,18 +17,43 @@
         <img class="NavImg w-100" src="Images/pngwing.com.png" alt="" >
         <a href="Home.html"><h1> Metric Units Conversion</h1></a>
       </div>
-      
-      <div class="navbar">
-        <div class="navA">
-            <ul>
-                <li><a href="Home.html"> Home </a></li>
-            <li><a href="Metric Conversion.html"> Metric Conversion</a></li>
-            <li><a href="History.html"> History </a></li>
-            <li><a href="Article.html"> Article</a></li>
-            <li><a href="FAQs.html"> FAQs </a></li>
-            </ul>
+
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+        
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              
+              <li class="nav-item">
+                <a class="nav-link " href="C:\Users\Hammd Elahi\OneDrive\Documents\GitHub\Matric-Conversion\Metric EProject\Home.html">Home </a>
+              </li>
+               
+              <li class="nav-item">
+                <a class="nav-link" href="C:\Users\Hammd Elahi\OneDrive\Documents\GitHub\Matric-Conversion\Metric EProject\Metric Conversion.html">Metric Conversion</a>
+              </li>
+               
+              <li class="nav-item">
+                <a class="nav-link" href="C:\Users\Hammd Elahi\OneDrive\Documents\GitHub\Matric-Conversion\Metric EProject\History.html">History</a>
+              </li>
+               
+              <li class="nav-item">
+                <a class="nav-link" href="C:\Users\Hammd Elahi\OneDrive\Documents\GitHub\Matric-Conversion\Metric EProject\Article.html">Article</a>
+              </li>
+               
+              <li class="nav-item">
+                <a class="nav-link" href="Metric EProject\FAQs.html">FAQs</a>
+              </li>
+        
+        
+          </div>
         </div>
-    </div>
+      </nav>
+    
+      
+      <br>
 <div class="container">
   <div class="row" >
     <div class="col-lg-12">
@@ -38,19 +64,19 @@
                     <a class="nav-link" aria-current="page" href="#">Area</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Length</a>
+                    <a class="nav-link" id="link1" href="#">Length</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Volume</a>
+                    <a class="nav-link" id="link1" href="#">Volume</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="#">Mass</a>
+                      <a class="nav-link" id="link1" href="#">Mass</a>
                     </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="#">Temperature</a>
+                      <a class="nav-link" id="link1" href="#">Temperature</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="#">Currency</a>
+                      <a class="nav-link" id="link1"  href="#">Currency</a>
                   </li>
                 
                 </ul>
@@ -307,5 +333,76 @@
   selectElements.forEach(select => select.addEventListener('change', handleSelectChange));
 </script>
 <script src="./JS/Metric Conversion.JS"></script>
+<br>
+
+
+<footer class="text-center text-white" style="background-color: #f1f1f1;">
+  <div class="container pt-4">
+<div class="container-fulid">
+ <a href="C:\Users\Hammd Elahi\OneDrive\Documents\GitHub\Matric-Conversion\Metric EProject\Home.html"><h4> Units Metric Conversion</h4> </a>
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fa fa-facebook " aria-hidden="true"></i></a>
+
+      <!-- Twitter -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fa fa-twitter " aria-hidden="true"></i></a>
+
+      <!-- Google -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fa fa-google" aria-hidden="true"></i></a>
+
+      <!-- Instagram -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fa fa-instagram" aria-hidden="true"></i></a>
+
+      <!-- Linkedin -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+      <!-- Github -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fa fa-github" aria-hidden="true"></i></a>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center text-dark" style="color: rgb(238, 167, 0) !important; font-weight: 500;  ">
+    ©2023 Copyright: APTECH lt
+  </div>
+  <!-- Copyright -->
+</footer>
+
+
+
+
+
+
 </body>
 </html>

@@ -12,7 +12,7 @@ function handleNavClick(event) {
     }
   }
   
-  const navLinks = document.querySelectorAll('.nav-link');
+  const navLinks = document.querySelectorAll('#link1');
   navLinks.forEach(link => link.addEventListener('click', handleNavClick));
 
 

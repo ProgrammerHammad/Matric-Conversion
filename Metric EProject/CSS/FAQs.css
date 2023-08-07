@@ -5,30 +5,35 @@
 
 
 body{
-  background-color: #212529;
+  background-color:   #F7eac9;
 }
 
-.navbar{
-  background-color: rgba(0, 0, 0, 0.783);
-  height: 37px;
-  font-weight: 600;
-}
 
 .navA ul{ 
   display: flex!important;
   margin-left: 700px;
-
-  
 }
 
 li{ list-style: none !important;
   
 }
 
-.navA a{
+
+
+.navbar{
+  background-color: #5c5346 !important;
+  height: 37px;
+  font-weight: 600;
+  
+}
+
+.one { background-color: rgb(238, 167, 0) !important;
+  position:relative;}
+
+#navbarSupportedContent a{
   justify-content: space-between;
   text-decoration: none !important;
-  padding: 25px;
+  padding: 15px;
   color: rgb(238, 167, 0);
   font-family: Arial, Helvetica, sans-serif;
 
@@ -39,8 +44,6 @@ li{ list-style: none !important;
   width: 1388px;
   margin-left: -42px; 
 }
-.one{ background-color: rgb(238, 167, 0);
-  position:relative;}
 
 h1{
   position: absolute;
@@ -53,7 +56,6 @@ h1{
   font-weight: 600;
 }
 
-<<<<<<< Updated upstream
 .NavImg{
   height: 100px;
   margin-top: -40px;
@@ -63,32 +65,14 @@ h1{
 .one{ background-color: rgb(238, 167, 0);
   position:relative;}
 
-h1{
-  position: absolute;
-  margin-top: -42px;
-  font-size: 35px;
-  padding-left: 10px;
-  color: whitesmoke;
-  text-shadow: 1px 1px black;
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: 600;
-}
-
-=======
-body{
-  background-color: #212529;
-}
->>>>>>> Stashed changes
   
   h2{
+    margin-top: 30pxs;
       text-align: center;
-      padding: 10px;
       font-size: 50px;
-      color:white;
-<<<<<<< Updated upstream
-      margin: auto !;
-=======
->>>>>>> Stashed changes
+  color: rgb(238, 167, 0) !important;
+  text-shadow: 0.9px 0.9px rgb(80, 80, 80) !important;
+
       
       
   }
@@ -97,11 +81,10 @@ body{
       color:white; */
   
   .card-body{
-<<<<<<< Updated upstream
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
       background-color: rgba(238,167,0);
-      width: 800px;
+      width: 80%;
       border-style: solid;
       border-radius: 5px;
       margin: auto;
@@ -111,30 +94,13 @@ body{
       height:500px;
       height:auto!important;
       min-height:380px;
-=======
-      background-color: rgba(238,167,0);
-      width: 600px;
-      border-style: solid;
-      border-radius: 5px;
-      margin-left: 390px;
-      margin-top: 50px;
-      border-color: lightgrey;
-      color:white;
-      height:px;
-      height:auto!important;
-      min-height:400px;
->>>>>>> Stashed changes
   }
   .question1{
       border-style:solid;
       border-color:rgba(0,0,0,0.783);
       padding:5px;
-      background-color: black;
+      background-color:black ;
       font-size: 20px;
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
   }
   .question2{
       border-style:solid;
@@ -159,7 +125,6 @@ body{
       border-color:rgba(0,0,0,0.783);
       padding:5px;
       background-color: black;
-<<<<<<< Updated upstream
       font-size: 20px;
   }
   
@@ -185,16 +150,30 @@ body{
  }
   
 footer{
-    background-color: rgba(0, 0, 0, 0.783) !important;
+    background-color:  #5c5346!important;
     margin-top: 40px;
 }
 
 .copy{
-    padding-top: 10px !important;
-    height: 40px;
+    font-weight: 500 !important;
     color: rgb(238, 167, 0);
 }
-=======
-    font-size: 20px;}
+
+h4{ 
+  position: relative;
+  font-size: 22px;
+  color: rgb(238, 167, 0);
+  text-align: center;
+  text-shadow: 1px 1px black;}
   
->>>>>>> Stashed changes
+  a{
+      text-decoration: none;
+  }
+
+
+  
+  
+  /* Style the links inside the navigation bar */
+
+  
+ 
