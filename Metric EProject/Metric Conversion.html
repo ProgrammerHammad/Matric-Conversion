@@ -28,25 +28,24 @@
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               
               <li class="nav-item">
-                <a class="nav-link " href="C:\Users\Hammd Elahi\OneDrive\Documents\GitHub\Matric-Conversion\Metric EProject\Home.html">Home </a>
+                <a class="nav-link" href="./Home.html">Home </a>
               </li>
                
               <li class="nav-item">
-                <a class="nav-link" href="C:\Users\Hammd Elahi\OneDrive\Documents\GitHub\Matric-Conversion\Metric EProject\Metric Conversion.html">Metric Conversion</a>
+                <a class="nav-link" href="./Metric Conversion.html">Metric Conversion</a>
               </li>
                
               <li class="nav-item">
-                <a class="nav-link" href="C:\Users\Hammd Elahi\OneDrive\Documents\GitHub\Matric-Conversion\Metric EProject\History.html">History</a>
+                <a class="nav-link" href="./History.html">History</a>
               </li>
                
               <li class="nav-item">
-                <a class="nav-link" href="C:\Users\Hammd Elahi\OneDrive\Documents\GitHub\Matric-Conversion\Metric EProject\Article.html">Article</a>
+                <a class="nav-link" href="./Article.html">Article</a>
               </li>
                
               <li class="nav-item">
-                <a class="nav-link" href="Metric EProject\FAQs.html">FAQs</a>
+                <a class="nav-link" href="./FAQs.html">FAQs</a>
               </li>
-        
         
           </div>
         </div>
@@ -61,7 +60,7 @@
           <div class="nav">
               <ul class="nav nav-tabs">
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Area</a>
+                    <a class="nav-link" id="link1" aria-current="page" href="#">Area</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" id="link1" href="#">Length</a>
@@ -81,14 +80,18 @@
                 
                 </ul>
           </div>
-          <div class="inputs">
-            <input type="text" id="val1">
-            <input type="text" id="val2">
+          <div class="inputs row">
+            <div class="col-lg-6">
+              <input type="text" id="val1" placeholder="To">
             </div>
-            <div class="Result">
-            <p></p> 
-            <button>Convert</button>
+            <div class="col-lg-6 ">
+              <input type="text" id="val2" placeholder="From">
+
             </div>
+            </div>
+             
+            <button class="btn btn-dark text-center" id="cvtbtn">Convert</button>
+            
           
       
       <div class="select" style="display: block;" id="Area">
@@ -301,7 +304,7 @@
 
 </div>
 
-<script>
+<!-- <script>
   function updateResult() {
     const val1 = parseFloat(document.getElementById('val1').value) || 0;
     const val2 = parseFloat(document.getElementById('val2').value) || 0;
@@ -331,7 +334,7 @@
   
   const selectElements = document.querySelectorAll('select');
   selectElements.forEach(select => select.addEventListener('change', handleSelectChange));
-</script>
+</script> -->
 <script src="./JS/Metric Conversion.JS"></script>
 <br>
 
