@@ -26,8 +26,8 @@
   .NavImg{
     height: 100px;
     margin-top: -40px;
-    width: 1388px;
-    margin-left: -42px; 
+    width: 100%;
+     
   }
   .one{ background-color: rgb(238, 167, 0);
     position:relative;}
